@@ -14,7 +14,9 @@ from nimfa.methods.factorization.nmf import Nmf
 
 
 class Wnmf(Nmf):
-
+    '''Weighted NMF:
+        http://epubs.siam.org/doi/pdf/10.1137/1.9781611972801.18
+        '''
 
     def __init__(self, **params):
         self.name = "wnmf"
@@ -25,7 +27,7 @@ class Wnmf(Nmf):
 
     def euclidean_update(self):
         """Update basis and mixture matrix based on Euclidean distance multiplicative update rules.
-
+            
         """
 
         self.H = multiply(
